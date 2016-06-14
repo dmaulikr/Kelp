@@ -8,25 +8,21 @@ import SceneKit
 import Foundation
 
 class World : Empty
-{
-	let mirror = VignetteMirror()
-	let carpet = VignetteCarpet()
-	let lamp   = VignetteLamp()
-
+{	
 	override init()
 	{
 		super.init()
 		
 		self.position = SCNVector3(0,0,-6)
 	
-		addChildNode(mirror)
+		enter(mirror)
 	}
 	
 	func enter(vignette:Vignette)
 	{
 		empty()
 		addChildNode(vignette)
-		console.log(self,message: "Entering: \(vignette.name!)")
+		vignette.whenEnter()
 	}
 	
 	required init(coder aDecoder: NSCoder)

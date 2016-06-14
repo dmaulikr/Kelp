@@ -30,7 +30,6 @@ class Empty : SCNNode
 		for node in childNodes {
 			node.removeFromParentNode()
 		}
-		removeFromParentNode()
 	}
 	
 	func show()

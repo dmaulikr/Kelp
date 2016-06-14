@@ -23,6 +23,11 @@ class Vignette : Empty
 		console.log(self, message: "Started Vignette: \(name)")
 	}
 	
+	func whenEnter()
+	{
+		console.log(self,message:"Entering \(name!)")
+	}
+	
 	override func touch(id: Int)
 	{
 		console.log(self,message:"Touched!")
