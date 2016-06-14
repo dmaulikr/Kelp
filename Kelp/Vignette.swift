@@ -26,6 +26,11 @@ class Vignette
 		console.log(self, message: "Init Vignette: \(name)")
 	}
 	
+	func whenStart()
+	{
+		
+	}
+	
 	func touch(id:Int = 0)
 	{
 		console.log(self,message: "No touch event")

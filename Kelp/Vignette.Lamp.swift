@@ -9,12 +9,9 @@ import Foundation
 
 class VignetteLamp : Vignette
 {
-	let layer1 = Layer(id:0)
-	
 	init()
 	{
 		super.init(name:"Lamp")
-		
 	}
 		
 	required init(coder aDecoder: NSCoder)

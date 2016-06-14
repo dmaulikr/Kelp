@@ -12,15 +12,13 @@ class Trigger : Empty
 	var isEnabled:Bool = true
 	let host:Vignette!
 	var size:CGSize!
-	let operation:Int!
-	let destination:Vignette!
+	let event:Event!
 	
-	init(host:Vignette,position:SCNVector3,size:CGSize,operation:Int! = nil, destination:Vignette! = nil)
+	init(host:Vignette,position:SCNVector3,size:CGSize,event:Event)
 	{
-		self.operation = operation
+		self.event = event
 		self.host = host
 		self.size = size
-		self.destination = destination
 		super.init()
 		self.position = position
 		self.geometry = SCNPlane(width: size.width, height: size.height)
@@ -30,8 +28,7 @@ class Trigger : Empty
 	override func touch(id:Int = 0)
 	{
 		if isEnabled == false { return }
-		if operation != nil { host.touch(operation) }
-		if destination != nil { world.enter(destination) }
+		event.action()
 	}
 	
 	override func update()

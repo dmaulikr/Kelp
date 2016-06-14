@@ -12,13 +12,6 @@ class UI : Empty
 	override init()
 	{
 		super.init()
-		
-		let buttonSize = 0.09
-		
-//		let button = Trigger(host: self, position:SCNVector3(-0.2,0,0), size: CGSize(width: buttonSize,height: buttonSize), operation: 1)
-//		button.geometry?.materials.first?.diffuse.contents = red
-//		
-//		self.addChildNode(button)
 	}
 	
 	override func touch(id: Int)

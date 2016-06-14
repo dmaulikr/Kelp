@@ -8,14 +8,25 @@ import SceneKit
 import Foundation
 
 class VignetteMirror : Vignette
-{
+{	
 	init()
 	{
 		super.init(name:"Mirror")
-		
-		layers[1].addTrigger(Trigger(host: self, position:SCNVector3(0.7,-0.9,0.01), size: CGSize(width: 1, height: 1.2), operation: 1))
-		
-		layers[2].addTrigger(Trigger(host: self, position:SCNVector3(-0.5,-1,0.01), size: CGSize(width: 1, height: 1), operation: 1))
+	}
+	
+	override func whenStart()
+	{
+		layers[1].addTrigger(
+			Trigger(host: self, position:SCNVector3(0.7,-0.9,0.01), size: CGSize(width: 1, height: 1.2), event:
+				Event(name: "Baba", destination: VignetteCarpet())
+			)
+		)
+//
+//		layers[2].addTrigger(
+//			Trigger(host: self, position:SCNVector3(-0.5,-1,0.01), size: CGSize(width: 1, height: 1), event:
+//				Event(name: "Lamp",destination:collection.lamp)
+//			)
+//		)
 	}
 	
 	required init(coder aDecoder: NSCoder)
