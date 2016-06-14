@@ -61,7 +61,7 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 			touchPosition = touch.locationInView(self.view)
 		}
 		
-		camera.eulerAngles.y += degToRad(Float(touchPosition.x - touchOrigin.x))/10
+		camera.eulerAngles.y -= degToRad(Float(touchPosition.x - touchOrigin.x))/10
 		camera.eulerAngles.x -= degToRad(Float(touchPosition.y - touchOrigin.y))/10
 		
 		touchOrigin = touchPosition

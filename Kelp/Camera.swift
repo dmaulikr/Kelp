@@ -15,7 +15,7 @@ class Camera : Empty
 	{
 		super.init()
 		
-		viewer.position = SCNVector3(0,0,5)
+		viewer.position = SCNVector3(0,1,5)
 		viewer.camera = SCNCamera()
 		viewer.camera?.automaticallyAdjustsZRange = true
 		viewer.camera?.usesOrthographicProjection = true
