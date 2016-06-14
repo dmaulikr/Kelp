@@ -15,13 +15,12 @@ class World : Empty
 	{
 		super.init()
 		
-		self.position = SCNVector3(0,0,-10)
+		self.position = SCNVector3(0,0,-2)
 		
 		var d:Float = 0
 		while d < 5 {
 			let layer = SCNNode(geometry: SCNPlane(width: 3, height: 3))
-			layer.position = SCNVector3(0,0,(d/2))
-			layer.opacity = 0.25
+			layer.position = SCNVector3(0,0,d)
 			depths.append(layer)
 			addChildNode(layer)
 			d += 1
@@ -31,9 +30,13 @@ class World : Empty
 	
 	func enter(vignette:Vignette)
 	{
+		depths[0].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).0")
+		depths[1].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).1")
+		depths[2].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).2")
+		depths[3].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).3")
+		depths[4].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).4")
 		
-		depths[0].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).1")
-		vignette.whenEnter()
+//		vignette.whenEnter()
 	}
 	
 	required init(coder aDecoder: NSCoder)

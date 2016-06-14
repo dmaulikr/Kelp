@@ -12,8 +12,8 @@ class Collection
 	
 	init()
 	{
-		mirror.whenStart()
-		lamp.whenStart()
-		carpet.whenStart()
+//		mirror.whenStart()
+//		lamp.whenStart()
+//		carpet.whenStart()
 	}
 }

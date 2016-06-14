@@ -14,29 +14,25 @@ class VignetteMirror : Vignette
 	init()
 	{
 		super.init(name:"Mirror")
-		
-		addChildNode(Layer(depth:0))
-		addChildNode(Layer(depth:1))
-		addChildNode(layer2)
 	}
 	
-	override func whenStart()
-	{
-		super.whenStart()
-		
-		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
-		layer2.addTrigger(trigger)
-		trigger.debug(white)
-		
-		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: collection.lamp)
-		layer2.addTrigger(trigger2)
-		trigger2.debug(red)
-	}
-	
-	override func whenEnter()
-	{
-		super.whenEnter()
-	}
+//	override func whenStart()
+//	{
+//		super.whenStart()
+//		
+//		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
+//		layer2.addTrigger(trigger)
+//		trigger.debug(white)
+//		
+//		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: collection.lamp)
+//		layer2.addTrigger(trigger2)
+//		trigger2.debug(red)
+//	}
+//	
+//	override func whenEnter()
+//	{
+//		super.whenEnter()
+//	}
 	
 	required init(coder aDecoder: NSCoder)
 	{

@@ -9,13 +9,18 @@ import Foundation
 
 class Camera : Empty
 {
+	let viewer = Empty()
+	
 	override init()
 	{
 		super.init()
 		
-		self.camera = SCNCamera()
-		self.camera?.xFov = 25
-		self.camera?.automaticallyAdjustsZRange = true
+		viewer.position = SCNVector3(0,0,5)
+		viewer.camera = SCNCamera()
+		viewer.camera?.automaticallyAdjustsZRange = true
+		viewer.camera?.usesOrthographicProjection = true
+		viewer.camera?.orthographicScale = 1.5
+		addChildNode(viewer)
 		
 		ui.position = SCNVector3(0,-0.6,-2)
 		

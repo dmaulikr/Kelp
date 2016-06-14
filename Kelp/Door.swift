@@ -18,7 +18,7 @@ class Door : Empty
 	
 	override func touch(id: Int)
 	{
-		console.log(self,message: "Touched door to \(destination.name!)")
+		console.log(self,message: "Touched door to \(destination.name)")
 	}
 	
 	required init(coder aDecoder: NSCoder)

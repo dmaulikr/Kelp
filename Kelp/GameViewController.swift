@@ -36,7 +36,7 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 		
 		sceneView = self.view as! SCNView
 		sceneView.scene = scene
-		sceneView.backgroundColor = UIColor.blackColor()
+		sceneView.backgroundColor = white
 		sceneView.antialiasingMode = SCNAntialiasingMode.None
 		sceneView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:))))
 		sceneView.preferredFramesPerSecond = 30
@@ -60,6 +60,9 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 		for touch: AnyObject in touches {
 			touchPosition = touch.locationInView(self.view)
 		}
+		
+		camera.eulerAngles.y += degToRad(Float(touchPosition.x - touchOrigin.x))/10
+		camera.eulerAngles.x -= degToRad(Float(touchPosition.y - touchOrigin.y))/10
 		
 		touchOrigin = touchPosition
 	}
