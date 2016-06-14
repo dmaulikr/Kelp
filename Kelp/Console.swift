@@ -11,8 +11,9 @@ class Console
 		
 	}
 	
-	func log(host:AnyObject,message:String)
+	func log(host:AnyObject,message:String,rune:String = "~")
 	{
-		print("\(host) \(message)")
+		let host = "\(host.classForCoder)"
+		print("\(host.stringByPaddingToLength(20, withString: " ", startingAtIndex: 0)) \(rune) \(message)")
 	}
 }

@@ -36,12 +36,12 @@ class Trigger : Empty
 		
 	}
 	
-	func debug()
+	func debug(color:UIColor = white)
 	{
-		addChildNode(Line(vertices: [SCNVector3(size.width/2,size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: white))
-		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(-size.width/2,-size.height/2,0)], color: white))
-		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(size.width/2,size.height/2,0)], color: white))
-		addChildNode(Line(vertices: [SCNVector3(-size.width/2,-size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: white))
+		addChildNode(Line(vertices: [SCNVector3(size.width/2,size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: color))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(-size.width/2,-size.height/2,0)], color: color))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(size.width/2,size.height/2,0)], color: color))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,-size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: color))
 	}
 	
 	required init(coder aDecoder: NSCoder)

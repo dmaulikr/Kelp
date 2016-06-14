@@ -20,7 +20,7 @@ class VignetteMirror : Vignette
 		
 		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
 		layer2.addTrigger(trigger)
-		trigger.debug()
+		trigger.debug(red)
 	}
 	
 	required init(coder aDecoder: NSCoder)
