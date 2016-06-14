@@ -20,7 +20,14 @@ class Vignette : Empty
 		
 		eulerAngles.z = degToRad(90)
 		
-		console.log(self, message: "Started Vignette: \(name)")
+		console.log(self, message: "Init Vignette: \(name)")
+	}
+	
+	override func whenStart()
+	{
+		super.whenStart()
+		
+		console.log(self, message: "Start Vignette: \(name)")
 	}
 	
 	func whenEnter()

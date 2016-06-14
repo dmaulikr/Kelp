@@ -9,9 +9,26 @@ import Foundation
 
 class VignetteLamp : Vignette
 {
+	let layer1 = Layer(depth:0)
+	
 	init()
 	{
 		super.init(name:"Lamp")
+		
+		addChildNode(Layer(depth:0))
+	}
+	
+	override func whenStart()
+	{
+		super.whenStart()
+		
+		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
+		layer1.addTrigger(trigger)
+		trigger.debug(white)
+		
+		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: mirror)
+		layer1.addTrigger(trigger2)
+		trigger2.debug(red)
 	}
 	
 	required init(coder aDecoder: NSCoder)

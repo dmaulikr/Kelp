@@ -22,11 +22,13 @@ class VignetteMirror : Vignette
 	
 	override func whenStart()
 	{
+		super.whenStart()
+		
 		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
 		layer2.addTrigger(trigger)
 		trigger.debug(white)
 		
-		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: mirror)
+		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: lamp)
 		layer2.addTrigger(trigger2)
 		trigger2.debug(red)
 	}
@@ -34,7 +36,6 @@ class VignetteMirror : Vignette
 	override func whenEnter()
 	{
 		super.whenEnter()
-		
 	}
 	
 	required init(coder aDecoder: NSCoder)

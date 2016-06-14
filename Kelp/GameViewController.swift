@@ -30,6 +30,7 @@ var clear = UIColor(white: 0, alpha: 0)
 // Vignettes
 
 let mirror = VignetteMirror()
+let lamp   = VignetteLamp()
 
 class MainViewController: UIViewController, SCNSceneRendererDelegate
 {

@@ -8,20 +8,23 @@ import SceneKit
 import Foundation
 
 class World : Empty
-{	
+{
+	let vignetteRoot = Empty()
+	
 	override init()
 	{
 		super.init()
 		
 		self.position = SCNVector3(0,0,-6)
-	
+		addChildNode(vignetteRoot)
+		
 		enter(mirror)
 	}
 	
 	func enter(vignette:Vignette)
 	{
-		empty()
-		addChildNode(vignette)
+		vignetteRoot.empty()
+		vignetteRoot.addChildNode(vignette)
 		vignette.whenEnter()
 	}
 	
