@@ -14,12 +14,13 @@ class Trigger : Empty
 	let operation:Int!
 	var size:CGSize!
 	
-	init(host:Empty,size:CGSize,operation:Int = 0)
+	init(host:Empty,position:SCNVector3,size:CGSize,operation:Int = 0)
 	{
 		self.operation = operation
 		self.host = host
 		self.size = size
 		super.init()
+		self.position = position
 		self.geometry = SCNPlane(width: size.width, height: size.height)
 		self.geometry?.materials.first?.diffuse.contents = clear
 	}
@@ -37,7 +38,10 @@ class Trigger : Empty
 	
 	func debug()
 	{
-		self.geometry?.materials.first?.diffuse.contents = red
+		addChildNode(Line(vertices: [SCNVector3(size.width/2,size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: white))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(-size.width/2,-size.height/2,0)], color: white))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(size.width/2,size.height/2,0)], color: white))
+		addChildNode(Line(vertices: [SCNVector3(-size.width/2,-size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: white))
 	}
 	
 	required init(coder aDecoder: NSCoder)

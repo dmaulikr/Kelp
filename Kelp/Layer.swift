@@ -13,12 +13,16 @@ class Layer : Empty
 	{
 		super.init()
 		
-		let rect = Rect(size: CGSize(width: 3, height: 3))
-		rect.geometry?.materials.first!.diffuse.contents = UIImage(named: "what")
-		
-		addChildNode(rect)
-		
-		
+		position = SCNVector3(0,0,depth/4)
+		geometry = SCNPlane(width: 3, height: 3)
+		geometry?.materials.first!.diffuse.contents = UIImage(named: "what")
+		eulerAngles.z = degToRad(-90)
+		opacity = 0.25
+	}
+	
+	func addTrigger(trigger:Trigger)
+	{
+		addChildNode(trigger)
 	}
 	
 	required init(coder aDecoder: NSCoder)

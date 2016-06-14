@@ -17,7 +17,7 @@ class Camera : Empty
 		self.camera?.xFov = 25
 		self.camera?.automaticallyAdjustsZRange = true
 		
-		ui.position = SCNVector3(0,-0.4,-2)
+		ui.position = SCNVector3(0,-0.6,-2)
 		
 		addChildNode(ui)
 	}

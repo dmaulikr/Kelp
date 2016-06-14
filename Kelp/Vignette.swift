@@ -20,8 +20,6 @@ class Vignette : Empty
 		
 		eulerAngles.z = degToRad(90)
 		
-		addChildNode(Layer(depth:0))
-		
 		console.log(self, message: "Started Vignette: \(name)")
 	}
 	

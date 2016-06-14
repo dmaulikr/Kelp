@@ -12,6 +12,16 @@ class VignetteMirror : Vignette
 	init()
 	{
 		super.init(name:"Mirror")
+		
+		let layer2 = Layer(depth:2)
+		addChildNode(Layer(depth:0))
+		addChildNode(Layer(depth:1))
+		addChildNode(layer2)
+		
+		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 1, height: 1), operation: 1)
+		layer2.addTrigger(trigger)
+		trigger.debug()
+		
 	}
 	
 	required init(coder aDecoder: NSCoder)
