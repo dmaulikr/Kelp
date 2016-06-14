@@ -17,6 +17,7 @@ let camera  = Camera()
 let ui      = UI()
 let world   = World()
 let player  = Player()
+let collection = Collection()
 
 // Colors
 
@@ -45,10 +46,6 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 	
 		scene.rootNode.addChildNode(camera)
 		scene.rootNode.addChildNode(world)
-		
-		// Start
-		
-		world.whenStart()
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)

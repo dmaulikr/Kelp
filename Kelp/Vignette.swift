@@ -9,7 +9,7 @@ import Foundation
 
 class Vignette : Empty
 {
-	let links:Array<Trigger> = []
+	let trigger:Array<Trigger> = []
 	let layers:Array<Layer> = []
 	
 	init(name:String)

@@ -9,22 +9,30 @@ import Foundation
 
 class World : Empty
 {
-	let vignetteRoot = Empty()
+	var depths:Array<SCNNode> = []
 	
 	override init()
 	{
 		super.init()
 		
-		self.position = SCNVector3(0,0,-6)
-		addChildNode(vignetteRoot)
+		self.position = SCNVector3(0,0,-10)
 		
-		enter(mirror)
+		var d:Float = 0
+		while d < 5 {
+			let layer = SCNNode(geometry: SCNPlane(width: 3, height: 3))
+			layer.position = SCNVector3(0,0,(d/2))
+			layer.opacity = 0.25
+			depths.append(layer)
+			addChildNode(layer)
+			d += 1
+		}
+		enter(collection.mirror)
 	}
 	
 	func enter(vignette:Vignette)
 	{
-		vignetteRoot.empty()
-		vignetteRoot.addChildNode(vignette)
+		
+		depths[0].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).1")
 		vignette.whenEnter()
 	}
 	

@@ -26,7 +26,7 @@ class VignetteLamp : Vignette
 		layer1.addTrigger(trigger)
 		trigger.debug(white)
 		
-		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: mirror)
+		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: collection.mirror)
 		layer1.addTrigger(trigger2)
 		trigger2.debug(red)
 	}
