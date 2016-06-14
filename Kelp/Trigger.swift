@@ -25,7 +25,7 @@ class Trigger : Empty
 		self.geometry?.materials.first?.diffuse.contents = clear
 	}
 	
-	override func touch(id:Int)
+	override func touch(id:Int = 0)
 	{
 		if isEnabled == false { return }
 		host.touch(operation)

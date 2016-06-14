@@ -18,7 +18,7 @@ class Empty : SCNNode
 	
 	func touch(id:Int = 0)
 	{
-		
+		console.log(self,message: "No touch event")
 	}
 	
 	func update()

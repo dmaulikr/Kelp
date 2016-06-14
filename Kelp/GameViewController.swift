@@ -77,8 +77,12 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 		
 		if hitResults.count > 0
 		{
-			let result: AnyObject! = hitResults[0]
-			(result.node as! Empty).touch()
+			for result in hitResults {
+				let result: Any! = result.node
+				if result is Trigger {
+					(result as! Trigger).touch()
+				}
+			}
 		}
 	}
 	
