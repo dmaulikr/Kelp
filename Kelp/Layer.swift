@@ -13,7 +13,12 @@ class Layer : Empty
 	{
 		super.init()
 		
-		addChildNode(Rect(size: CGSize(width: 3, height: 3)))
+		let rect = Rect(size: CGSize(width: 3, height: 3))
+		rect.geometry?.materials.first!.diffuse.contents = UIImage(named: "what")
+		
+		addChildNode(rect)
+		
+		
 	}
 	
 	required init(coder aDecoder: NSCoder)
