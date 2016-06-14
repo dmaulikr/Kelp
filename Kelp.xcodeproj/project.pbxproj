@@ -26,6 +26,7 @@
 		5720A9461D107F27006610B2 /* Vignette.Mirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5720A9331D107F27006610B2 /* Vignette.Mirror.swift */; };
 		5720A9471D107F27006610B2 /* Vignette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5720A9341D107F27006610B2 /* Vignette.swift */; };
 		5720A9481D107F27006610B2 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5720A9351D107F27006610B2 /* World.swift */; };
+		5720A94D1D108074006610B2 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5720A94C1D108074006610B2 /* Layer.swift */; };
 		57BEF6CC1D107ED8003BE60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEF6CB1D107ED8003BE60D /* AppDelegate.swift */; };
 		57BEF6CE1D107ED8003BE60D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 57BEF6CD1D107ED8003BE60D /* art.scnassets */; };
 		57BEF6D01D107ED9003BE60D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEF6CF1D107ED9003BE60D /* GameViewController.swift */; };
@@ -54,6 +55,7 @@
 		5720A9331D107F27006610B2 /* Vignette.Mirror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vignette.Mirror.swift; sourceTree = "<group>"; };
 		5720A9341D107F27006610B2 /* Vignette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vignette.swift; sourceTree = "<group>"; };
 		5720A9351D107F27006610B2 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		5720A94C1D108074006610B2 /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		57BEF6C81D107ED8003BE60D /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BEF6CB1D107ED8003BE60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57BEF6CD1D107ED8003BE60D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -78,10 +80,11 @@
 		5720A9491D107F58006610B2 /* Vignettes */ = {
 			isa = PBXGroup;
 			children = (
+				5720A94C1D108074006610B2 /* Layer.swift */,
+				5720A9341D107F27006610B2 /* Vignette.swift */,
 				5720A9311D107F27006610B2 /* Vignette.Carpet.swift */,
 				5720A9321D107F27006610B2 /* Vignette.Lamp.swift */,
 				5720A9331D107F27006610B2 /* Vignette.Mirror.swift */,
-				5720A9341D107F27006610B2 /* Vignette.swift */,
 			);
 			name = Vignettes;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				57BEF6D01D107ED9003BE60D /* GameViewController.swift in Sources */,
 				5720A9471D107F27006610B2 /* Vignette.swift in Sources */,
 				5720A9401D107F27006610B2 /* String.swift in Sources */,
+				5720A94D1D108074006610B2 /* Layer.swift in Sources */,
 				5720A93B1D107F27006610B2 /* Misc.swift in Sources */,
 				5720A9441D107F27006610B2 /* Vignette.Carpet.swift in Sources */,
 				5720A9391D107F27006610B2 /* Game.swift in Sources */,

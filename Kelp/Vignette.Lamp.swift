@@ -9,9 +9,9 @@ import Foundation
 
 class VignetteLamp : Vignette
 {
-	override init()
+	init()
 	{
-		super.init()
+		super.init(name:"Lamp")
 	}
 	
 	required init(coder aDecoder: NSCoder)

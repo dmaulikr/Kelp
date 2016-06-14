@@ -46,8 +46,6 @@ class MainViewController: UIViewController, SCNSceneRendererDelegate
 		// Camera
 		scene.rootNode.addChildNode(camera)
 		scene.rootNode.addChildNode(world)
-		
-		console.log(self, message: "test")
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)

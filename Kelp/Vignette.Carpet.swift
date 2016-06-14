@@ -9,9 +9,9 @@ import Foundation
 
 class VignetteCarpet : Vignette
 {
-	override init()
+	init()
 	{
-		super.init()
+		super.init(name:"Carpet")
 	}
 	
 	required init(coder aDecoder: NSCoder)

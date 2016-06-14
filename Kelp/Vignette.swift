@@ -9,20 +9,20 @@ import Foundation
 
 class Vignette : Empty
 {
-//	let layers:Array<Rect>!
-	let layer1 = Rect(size: CGSize(width: 3, height: 3))
-	let layer2 = Rect(size: CGSize(width: 3, height: 3))
-	let layer3 = Rect(size: CGSize(width: 3, height: 3))
-	let layer4 = Rect(size: CGSize(width: 3, height: 3))
-	let layer5 = Rect(size: CGSize(width: 3, height: 3))
+	let links:Array<Trigger> = []
+	let layers:Array<Layer> = []
 	
-	override init()
+	init(name:String)
 	{
 		super.init()
 		
+		self.name = name
+		
 		eulerAngles.z = degToRad(90)
 		
-		addChildNode(layer1)
+		addChildNode(Layer(depth:0))
+		
+		console.log(self, message: "Started Vignette: \(name)")
 	}
 	
 	required init(coder aDecoder: NSCoder)

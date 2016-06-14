@@ -9,9 +9,9 @@ import Foundation
 
 class VignetteMirror : Vignette
 {
-	override init()
+	init()
 	{
-		super.init()
+		super.init(name:"Mirror")
 	}
 	
 	required init(coder aDecoder: NSCoder)
