@@ -27,11 +27,6 @@ let cyan  = UIColor(red: 0.44, green: 0.87, blue: 0.76, alpha: 1)
 let white = UIColor(white: 1, alpha: 1)
 var clear = UIColor(white: 0, alpha: 0)
 
-// Vignettes
-
-let mirror = VignetteMirror()
-let lamp   = VignetteLamp()
-
 class MainViewController: UIViewController, SCNSceneRendererDelegate
 {
 	override func viewDidLoad()

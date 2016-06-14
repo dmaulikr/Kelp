@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5720A9351D107F27006610B2 /* World.swift */,
+				57B59DF61D10A6ED00A1F52A /* Collection.swift */,
 				5720A9341D107F27006610B2 /* Vignette.swift */,
 				5720A9311D107F27006610B2 /* Vignette.Carpet.swift */,
 				5720A9321D107F27006610B2 /* Vignette.Lamp.swift */,
@@ -92,7 +93,6 @@
 				5720A94C1D108074006610B2 /* Layer.swift */,
 				5720A92F1D107F27006610B2 /* Trigger.swift */,
 				57B59DF41D109EDE00A1F52A /* Door.swift */,
-				57B59DF61D10A6ED00A1F52A /* Collection.swift */,
 			);
 			name = Vignettes;
 			sourceTree = "<group>";

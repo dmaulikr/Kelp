@@ -3,3 +3,15 @@
 //  Copyright © 2016 Devine Lu Linvega. All rights reserved.
 
 import Foundation
+
+class Collection
+{
+	let mirror = VignetteMirror()
+	let lamp   = VignetteLamp()
+	let carpet = VignetteCarpet()
+	
+	init()
+	{
+	
+	}
+}
