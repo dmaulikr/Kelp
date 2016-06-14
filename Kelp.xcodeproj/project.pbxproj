@@ -75,6 +75,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5720A9491D107F58006610B2 /* Vignettes */ = {
+			isa = PBXGroup;
+			children = (
+				5720A9311D107F27006610B2 /* Vignette.Carpet.swift */,
+				5720A9321D107F27006610B2 /* Vignette.Lamp.swift */,
+				5720A9331D107F27006610B2 /* Vignette.Mirror.swift */,
+				5720A9341D107F27006610B2 /* Vignette.swift */,
+			);
+			name = Vignettes;
+			sourceTree = "<group>";
+		};
+		5720A94A1D107F6C006610B2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5720A92F1D107F27006610B2 /* Trigger.swift */,
+				5720A9241D107F27006610B2 /* Console.swift */,
+				5720A9251D107F27006610B2 /* Empty.swift */,
+				5720A9271D107F27006610B2 /* Line.swift */,
+				5720A9281D107F27006610B2 /* Misc.swift */,
+				5720A92A1D107F27006610B2 /* Rect.swift */,
+				5720A92B1D107F27006610B2 /* SCNNode.swift */,
+				5720A92C1D107F27006610B2 /* SCNVector3.swift */,
+				5720A92D1D107F27006610B2 /* String.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		5720A94B1D107F7A006610B2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5720A9351D107F27006610B2 /* World.swift */,
+				5720A9231D107F27006610B2 /* Camera.swift */,
+				5720A9261D107F27006610B2 /* Game.swift */,
+				5720A9291D107F27006610B2 /* Player.swift */,
+				5720A9301D107F27006610B2 /* UI.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		57BEF6BF1D107ED8003BE60D = {
 			isa = PBXGroup;
 			children = (
@@ -94,31 +133,16 @@
 		57BEF6CA1D107ED8003BE60D /* Kelp */ = {
 			isa = PBXGroup;
 			children = (
-				5720A9231D107F27006610B2 /* Camera.swift */,
-				5720A9241D107F27006610B2 /* Console.swift */,
-				5720A9251D107F27006610B2 /* Empty.swift */,
-				5720A9261D107F27006610B2 /* Game.swift */,
-				5720A9271D107F27006610B2 /* Line.swift */,
-				5720A9281D107F27006610B2 /* Misc.swift */,
-				5720A9291D107F27006610B2 /* Player.swift */,
-				5720A92A1D107F27006610B2 /* Rect.swift */,
-				5720A92B1D107F27006610B2 /* SCNNode.swift */,
-				5720A92C1D107F27006610B2 /* SCNVector3.swift */,
-				5720A92D1D107F27006610B2 /* String.swift */,
 				5720A92E1D107F27006610B2 /* TODO */,
-				5720A92F1D107F27006610B2 /* Trigger.swift */,
-				5720A9301D107F27006610B2 /* UI.swift */,
-				5720A9311D107F27006610B2 /* Vignette.Carpet.swift */,
-				5720A9321D107F27006610B2 /* Vignette.Lamp.swift */,
-				5720A9331D107F27006610B2 /* Vignette.Mirror.swift */,
-				5720A9341D107F27006610B2 /* Vignette.swift */,
-				5720A9351D107F27006610B2 /* World.swift */,
 				57BEF6CB1D107ED8003BE60D /* AppDelegate.swift */,
-				57BEF6CD1D107ED8003BE60D /* art.scnassets */,
 				57BEF6CF1D107ED9003BE60D /* GameViewController.swift */,
+				5720A94B1D107F7A006610B2 /* Core */,
+				5720A94A1D107F6C006610B2 /* Tools */,
+				5720A9491D107F58006610B2 /* Vignettes */,
 				57BEF6D11D107ED9003BE60D /* Main.storyboard */,
-				57BEF6D41D107ED9003BE60D /* Assets.xcassets */,
 				57BEF6D61D107ED9003BE60D /* LaunchScreen.storyboard */,
+				57BEF6CD1D107ED8003BE60D /* art.scnassets */,
+				57BEF6D41D107ED9003BE60D /* Assets.xcassets */,
 				57BEF6D91D107ED9003BE60D /* Info.plist */,
 			);
 			path = Kelp;
