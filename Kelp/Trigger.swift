@@ -10,12 +10,12 @@ import Foundation
 class Trigger : Empty
 {
 	var isEnabled:Bool = true
-	let host:Empty!
+	let host:Vignette!
 	var size:CGSize!
 	let operation:Int!
 	let destination:Vignette!
 	
-	init(host:Empty,position:SCNVector3,size:CGSize,operation:Int! = nil, destination:Vignette! = nil)
+	init(host:Vignette,position:SCNVector3,size:CGSize,operation:Int! = nil, destination:Vignette! = nil)
 	{
 		self.operation = operation
 		self.host = host
@@ -45,6 +45,9 @@ class Trigger : Empty
 		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(-size.width/2,-size.height/2,0)], color: color))
 		addChildNode(Line(vertices: [SCNVector3(-size.width/2,size.height/2,0),SCNVector3(size.width/2,size.height/2,0)], color: color))
 		addChildNode(Line(vertices: [SCNVector3(-size.width/2,-size.height/2,0),SCNVector3(size.width/2,-size.height/2,0)], color: color))
+		
+		addChildNode(Line(vertices: [SCNVector3(-0.1,0,0),SCNVector3(0.1,0,0)], color: color))
+		addChildNode(Line(vertices: [SCNVector3(0,-0.1,0),SCNVector3(0,0.1,0)], color: color))
 	}
 	
 	required init(coder aDecoder: NSCoder)

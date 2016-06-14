@@ -7,22 +7,22 @@ import QuartzCore
 import SceneKit
 import Foundation
 
-class Layer : Empty
+class Layer
 {
-	init(depth:CGFloat)
+	var id:Int!
+	var host:Vignette!
+	var triggers:Array<Trigger> = []
+	
+	init(id:Int)
 	{
-		super.init()
-		
-		position = SCNVector3(0,0,depth/4)
-		geometry = SCNPlane(width: 3, height: 3)
-		geometry?.materials.first!.diffuse.contents = UIImage(named: "what")
-		eulerAngles.z = degToRad(-90)
-		opacity = 0.25
+		self.id = id
 	}
 	
 	func addTrigger(trigger:Trigger)
 	{
-		addChildNode(trigger)
+		console.log(self,message: "Added trigger for \(trigger.host)")
+		trigger.debug(red)
+		triggers.append(trigger)
 	}
 	
 	required init(coder aDecoder: NSCoder)

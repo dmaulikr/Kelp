@@ -13,7 +13,7 @@ class Console
 	
 	func log(host:AnyObject,message:String,rune:String = "~")
 	{
-		let host = "\(host.classForCoder)"
+		let host = "\(host)"
 		print("\(host.stringByPaddingToLength(20, withString: " ", startingAtIndex: 0)) \(rune) \(message)")
 	}
 }

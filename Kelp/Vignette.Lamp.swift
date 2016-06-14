@@ -9,7 +9,7 @@ import Foundation
 
 class VignetteLamp : Vignette
 {
-	let layer1 = Layer(depth:0)
+	let layer1 = Layer(id:0)
 	
 	init()
 	{

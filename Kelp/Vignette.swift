@@ -10,13 +10,25 @@ import Foundation
 class Vignette
 {
 	var name:String = "Unknown"
-	let trigger:Array<Trigger> = []
-	let layers:Array<Layer> = []
+	let triggers:Array<Trigger> = []
+	var layers:Array<Layer> = []
 	
 	init(name:String)
 	{
 		self.name = name
+		
+		self.layers.append(Layer(id: 0))
+		self.layers.append(Layer(id: 1))
+		self.layers.append(Layer(id: 2))
+		self.layers.append(Layer(id: 3))
+		self.layers.append(Layer(id: 4))
+		
 		console.log(self, message: "Init Vignette: \(name)")
+	}
+	
+	func touch(id:Int = 0)
+	{
+		console.log(self,message: "No touch event")
 	}
 	
 	required init(coder aDecoder: NSCoder)

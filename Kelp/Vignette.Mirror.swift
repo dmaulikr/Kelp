@@ -9,30 +9,14 @@ import Foundation
 
 class VignetteMirror : Vignette
 {
-	let layer2 = Layer(depth:2)
-	
 	init()
 	{
 		super.init(name:"Mirror")
+		
+		layers[1].addTrigger(Trigger(host: self, position:SCNVector3(0.7,-0.9,0.01), size: CGSize(width: 1, height: 1.2), operation: 1))
+		
+		layers[2].addTrigger(Trigger(host: self, position:SCNVector3(-0.5,-1,0.01), size: CGSize(width: 1, height: 1), operation: 1))
 	}
-	
-//	override func whenStart()
-//	{
-//		super.whenStart()
-//		
-//		let trigger = Trigger(host: self, position:SCNVector3(0,0,0), size: CGSize(width: 0.5, height: 1), operation: 1)
-//		layer2.addTrigger(trigger)
-//		trigger.debug(white)
-//		
-//		let trigger2 = Trigger(host: self, position:SCNVector3(0.5,0.5,0), size: CGSize(width: 0.5, height: 1), destination: collection.lamp)
-//		layer2.addTrigger(trigger2)
-//		trigger2.debug(red)
-//	}
-//	
-//	override func whenEnter()
-//	{
-//		super.whenEnter()
-//	}
 	
 	required init(coder aDecoder: NSCoder)
 	{

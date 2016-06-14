@@ -55,7 +55,6 @@ class World : Empty
 		floor.eulerAngles.x = degToRad(-45)
 		addChildNode(floor)
 		
-		
 		enter(collection.mirror)
 	}
 	
@@ -70,6 +69,12 @@ class World : Empty
 		depths[2].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).2")
 		depths[3].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).3")
 //		depths[4].geometry?.materials.first!.diffuse.contents = UIImage(named: "\(vignette.name).4")
+		
+		for layer in vignette.layers {
+			for trigger in layer.triggers {
+				depths[layer.id].addChildNode(trigger)
+			}
+		}
 	}
 	
 	required init(coder aDecoder: NSCoder)
